@@ -34,4 +34,13 @@ class DescuentoFronteraTest {
          int obtenidoDespuesDeFrontera = descuento.porcentaje(101);
         assertEquals(10,obtenidoDespuesDeFrontera);
     }
+    /**
+     * Prueba que no se aplica descuento, incluso cuando se llega al limite inferior.
+     */
+       @Test
+    void ceroUnidadesSinDescuento() {
+        int obtenido = descuento.porcentaje(0);
+        assertEquals(0, obtenido);
+    }
+
 }
